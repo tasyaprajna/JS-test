@@ -1,18 +1,17 @@
-// console.log('Hello World');
+//object literals
 
-// var myName = "Prajna"
-// const mySecondName = "Tasya"
+const cart = document.getElementById("cart");
 
-// console.log(myName)
+//ES5 
+function addProduct(name, category) {
+    return {
+        name: name,
+        category //object literal, buat lebih singkat dan gaada pengulangan
+    };
+}
 
-const user = document.getElementById('user');
+var getProduct = addProduct("Iphone 12", "Smartphone");
 
-//ES5
-const user_logged_in = "Prajna";
-user.innerHTML = "Welcome, " + user_logged_in;
+console.log(getProduct);
 
-
-//ES6
-// user.innerHTML = 'Selamat datang, ${ user_logged_in }';
-
-user.innerHTML = `Anda berhasil login ${user_logged_in}`;
+cart.innerHTML = `Product 1: ${getProduct.name}, Category ${getProduct.category}`;
